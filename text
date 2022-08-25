@@ -1,0 +1,35 @@
+<span>Please read the following terms and conditions:</span>
+<p>
+    This Agreement is entered by and between Pure Spiritual Intelligence Inc. and , Pure and DreamLife Coach whereby you agree to provide a
+        <span id="points">...</span>
+  
+        <span id="moreText"> one-hour FREE coaching session to one of our community members with an option for signing them up for paid coaching sessions at the end of the FREE session.
+
+            ​
+            CODE OF ETHICS
+            As a coach, you agree to maintain the ethics and standards of behavior established by the International Coach Federation (ICF) that can be found HERE
+            
+            ​​
+            FEES
+            The first one-hour session with your coachee will be FREE. At the end of the coaching session, if you sign up your client for paid sessions, you will be paid at the rate of US$100 per session. Your client has an option of purchasing a single session at the rate of US$250, or a package of 10 sessions for US$2,000.
+            
+            ​
+            SESSIONS
+            The time of the coaching meetings and/or location will be determined by you and your Coachee based on a mutually agreed upon time.
+            
+            ​
+            TERMINATION
+            Either your Coachee or you, as the Coach, may terminate the Agreement between you at any time with 2 weeks written notice. In this case, you will be compensated for all coaching services rendered through and including the effective date of termination of the coaching relationship.
+            
+            ​
+            DURATION OF THE CONTRACT
+            After have been working with your Coachee for a period of ONE year, the Coachee becomes your Client, and thus all Agreements and/or Payments should be made directly between you, as a Coach, and your Coachee. The period of one year starts on the day of your FREE coaching session.
+        </span>
+    </p>
+  
+  
+    <!-- Trigger toggleText() when the 
+        button is clicked -->
+    <button onclick="toggleText()" id="textButton">
+        Show More
+    </button>
