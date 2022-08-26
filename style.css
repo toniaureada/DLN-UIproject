@@ -33,6 +33,7 @@
   body {
     font-family: 'Nunito', sans-serif;
     color: #384047;
+    font-family: 'Open Sans';
   }
   
   form {
@@ -54,7 +55,7 @@
 
   textarea,
   select {
-    background: rgba(255,255,255,0.1);
+    background: rgba(151, 150, 150, 0.826);
     border: none;
     font-size: 16px;
     height: auto;
@@ -63,7 +64,7 @@
     padding: 15px;
     width: 100%;
     background-color: #e8eeef;
-    color: #8a97a0;
+    color: #000000;
     box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
     margin-bottom: 30px;
   }
@@ -83,7 +84,7 @@
     padding: 19px 39px 18px 39px;
     color: #FFF;
     background-color: #3D1C4F;
-    font-size: 18px;
+    font-size: 25px;
     text-align: center;
     font-style: normal;
     border-radius: 5px;
@@ -133,7 +134,7 @@ p {
 #men {
     padding: -20px;
     font-weight: bold;
-    font-size: small;
+    font-size:medium;
     color: #384047;
 }
 span {
