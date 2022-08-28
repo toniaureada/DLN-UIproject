@@ -7,21 +7,25 @@
 }
 /*target="hidden_frame"*/
 
+button[type=submit]:hover {
+  background-color: #673AB7;
+}
 
-  details  summary {
-    cursor: pointer;
-  }
-  
-  details  summary .summary-closed,
-  details[open]  summary .summary-open {
-    display: initial;
-    font-weight: bolder;
-  }
-  
-  details[open]  summary .summary-closed,
-  details  summary .summary-open {
-    display: none;
-  }
+details  summary {
+  cursor: pointer;
+}
+
+details  summary .summary-closed,
+details[open]  summary .summary-open {
+  display: initial;
+  font-weight: bolder;
+}
+
+details[open]  summary .summary-closed,
+details  summary .summary-open {
+  display: none;
+}
+
   
   
   *, *:before, *:after {
@@ -48,6 +52,29 @@
   h1 {
     margin: 0 0 30px 0;
     text-align: center;
+  }
+
+  a {
+    color: #3D1C4F;
+    font-size: medium;
+    text-align: justify;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+    font-weight: bold;
+  }
+  
+
+  textarea {
+    background: rgba(151, 150, 150, 0.826);
+    border: none;
+    font-size: 16px;
+
+    margin: 0;
+    outline: 0;
+    width: 100% auto;
+    background-color: #e8eeef;
+    color: #000000;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    margin-bottom: 30px;
   }
   
   input[type="text"],
@@ -94,6 +121,8 @@
     box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
     margin-bottom: 10px;
   }
+
+  
   
   fieldset {
     margin-bottom: 30px;
@@ -141,3 +170,43 @@ span {
     font-weight: bolder;
     margin-bottom: 50px;
 }
+
+/*MODAL    */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+/*END OF MODAL*/
