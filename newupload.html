@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+ 
+  </head>
+  <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+  <style>
+    body {
+      background-color: #F4F7F8;
+    }
+    
+        
+    input[type=text] {
+      width: 40% auto;
+      color: rgb(0, 0, 0);
+
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: 'Open Sans';
+      font-size: 15px;
+      
+    }
+    input[type=file] {
+      width: 40% auto;
+      color: rgb(0, 0, 0);
+
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: 'Open Sans';
+      font-size: 15px;
+      
+    }
+    input[type=submit] {
+      width: 30% auto;
+      background-color: #3D1C4F;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: 'Open Sans';
+      align-items: right;
+      font-size: 15px;
+    }
+    
+    input[type=submit]:hover {
+      background-color: #673AB7;
+    }
+
+  form {
+      align-items: center;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: 'Open Sans';
+      
+      
+    }
+    label {
+      width: 15% auto;
+      color: rgb(0, 0, 0);
+      padding: 9px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: 'Open Sans';
+    }
+    
+  
+  table {
+      color: rgb(0, 0, 0);
+      border: none;
+      cursor: pointer;
+      font-family: 'Open Sans';
+      align-items: right;
+      font-size: 15px;
+      font-weight: bolder;
+    }
+    p {
+      color: rgb(0, 0, 0);
+      border: none;
+      cursor: pointer;
+      font-family: 'Open Sans';
+      align-items: right;
+      font-size: 15px;
+      font-weight: bolder;
+    }
+    </style>
+  <body>
+    <p>To allow us to use the photo, kindly click the upload button.</p>
+    <?var url = getUrl();?>
+    <form method="post" action="<?= url ?>" >
+      <table cellpadding="5px">
+      <tr>
+      <td>Email:</td>
+      <td><input type="text" name="username" required/></td>
+      </tr>
+      <tr>
+      <td>File:</td>
+      <td><input type="file" name="file" onchange="LoadFile(event)" />
+      <input type="hidden" id="fileData" name="fileData" />
+      <input type="hidden" id="mimeType" name="mimeType" />
+      <input type="hidden" id="fileName" name="fileName" /></td>
+      </tr>
+      <tr>
+      <td colspan="2"><input type="submit" value="Load File" /></td>
+      </tr>
+      <tr>
+      <td colspan="2"><span><?= message ?></span></td>      
+    </form>
+
+    <script>
+        function LoadFile(event)
+        {
+          var file = event.target.files[0];
+          var reader = new FileReader();
+          reader.onload = function(e) {
+            console.log(e.target.result);
+            var fileData = e.target.result.substr(e.target.result.indexOf(",")+1);
+            var mimeTypeStart = e.target.result.indexOf("data:") + 5;
+            var mimeTypeEnd = e.target.result.indexOf(";");
+            var mimeType = e.target.result.substr(mimeTypeStart, mimeTypeEnd - mimeTypeStart);
+            var fileName = file.name;
+            document.getElementById("fileData").value = fileData;
+            document.getElementById("mimeType").value = mimeType;
+            document.getElementById("fileName").value = fileName;
+          };    
+          reader.readAsDataURL(file);
+        }
+        </script>
+  </body>
+</html>
