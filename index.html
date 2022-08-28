@@ -8,81 +8,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <link rel="stylesheet" href="style.css">
 <iframe name="hidden_frame" class="hide"></iframe>
 
-
 </head>
+
 <body>
 
-    <form action="https://docs.google.com/forms/d/e/1FAIpQLSdxJQKkIDH34Y7C-OeNV5mpU1O33l3Je3W9Cm86QDjUvrBC2A/formResponse" method="post" onsubmit="myFunction()" target="hidden_frame">
-        <p><b> Blessed day, Coach</b></p><br>
-            We are thrilled for you to start coaching our Miracle Magnets. To set you up for success, please provide the following information:
-            <br><br> 1. You Last Name<br>
-            2. Your First Name<br>
-            3. Your Email<br>
-            4. Your time zone<br>
-            5. Your availability (in hours per week)<br>
-            6. Your Calendly link (make sure you set it up properly, with a zoom confirmation link being sent to your mentee)<br>
-            7. Your Bio (What would you like your mentee to know about you? Keep the length of your bio to no more than one paragraph)<br>
-            8. Your picture (if you have your picture where you are coaching, that would be amazing)</p>
-        
-        <hr><br>
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLSdxJQKkIDH34Y7C-OeNV5mpU1O33l3Je3W9Cm86QDjUvrBC2A/formResponse" method="post"  target="hidden_frame">
         <div class="Form-element">
             <span>First Name</span>
-            <input type="text" name="entry.314085686" placeholder="Type your first name" required> 
+            <input autocomplete="off" id="fname"  type="text" name="entry.314085686" placeholder="Type your first name" class="form-control" required> 
 
         </div>
         <div class="Form-element">
             <span>Last Name</span>
-            <input type="text" name="entry.2126602211" placeholder="Type your last name" required> 
+            <input autocomplete="off" id="lname" type="text" name="entry.2126602211" placeholder="Type your last name" class="form-control"  required> 
 
         </div>
 
         <div class="Form-element">
             <span>Email</span>
-            <input type="email" name="entry.499579989" placeholder="test@test.com" required> 
+            <input autocomplete="off" id="email" type="email" name="entry.499579989" placeholder="test@test.com" class="form-control"  required> 
 
         </div>
         <div class="Form-element">
             <span>What is your timezone?</span>
-            <input type="text" name="entry.940012361" placeholder="eg. EST, PST, GMT + 13, etc " required> 
+            <input autocomplete="off" id="timezone" type="text" name="entry.940012361" placeholder="eg. EST, PST, GMT + 13, etc " class="form-control"  required> 
 
         </div>
 
         <div class="Form-element">
             <span>Availability</span>
-            <input type="text" name="entry.2035670981" placeholder="2pm to 3pm EST" required> 
+            <input autocomplete="off" id="avail" type="text" name="entry.2035670981" placeholder="Around next week" class="form-control"  required> 
 
         </div>
         
         <div class="Form-element">
             <span>Calendly Link</span>
-            <input type="text" name="entry.408756618" placeholder="Calendly.com/appointment" required> 
+            <input autocomplete="off" id="cal" type="text" name="entry.408756618" placeholder="Calendly.com/appointment" class="form-control"  required> 
 
         </div>
-        <div class="Form-element" ">
-            <span>Bio</span>
-            <input  type="text" name="entry.586417276" placeholder="You may enter your bio here, with no more than 200 characters."  maxlength="200"  required> 
+        <div class="Form-element">
+            <span>Your Bio</span>
+            <textarea type="text" id="bio" name="entry.586417276" placeholder="You may enter your bio here, with no more than 200 characters."  maxlength="500"  class="form-control"   style="height: 200px;" required></textarea>
 
         </div>
     </div>
-    <div class="Form-element">
-        <span>Link to Google Drive Dropbox Folder of your headshot photo</span>
-        <input type="text" name="entry.561876557" placeholder="Put your name or the link of your image" required> 
- 
-    </div>
-    <iframe loading="lazy" src="https://script.google.com/a/macros/jamesmacneil.com/s/AKfycbyUp3-O5G1CoyTNhxPzK7G4MHYUm3rvVX9amYsIjwESo11LVld_f0xU4k147ueGmcxJWA/exec" name="iFrame Name" scrolling="No" height="130px auto" width="100%" style="border: none;"></iframe><hr>
+    
+    <iframe loading="lazy" src="https://script.google.com/a/macros/jamesmacneil.com/s/AKfycbyUp3-O5G1CoyTNhxPzK7G4MHYUm3rvVX9amYsIjwESo11LVld_f0xU4k147ueGmcxJWA/exec" name="iFrame Name" scrolling="No" height="140px auto" width="100%" style="border: none;"></iframe><hr>
    <details><summary>
             <span class="summary-closed">Please read the following terms and conditions</span>
-            <span class="summary-open">Read Less</span>
+            <span class="summary-open">Please read the following terms and condition</span>
           </summary>
           <p>This Agreement is entered by and between Pure Spiritual Intelligence Inc. and , Pure and DreamLife Coach whereby you agree to provide a one-hour FREE coaching session to one of our community members with an option for signing them up for paid coaching sessions at the end of the FREE session.</p>
     
     
           <p>★<span id="men">CODE OF ETHICS</span><br>
-            a coach, you agree to maintain the ethics and standards of behavior established by the International Coach Federation (ICF) that can be found HERE</p>
+            a coach, you agree to maintain the ethics and standards of behavior established by the International Coach Federation (ICF) that can be found <a href="https://coachingfederation.org/ethics/code-of-ethics." target="_blank">HERE</a>.</p>
             
 
             <p>★<span id="men">FEES</span><br>
@@ -101,20 +89,62 @@
             After have been working with your Coachee for a period of ONE year, the Coachee becomes your Client, and thus all Agreements and/or Payments should be made directly between you, as a Coach, and your Coachee. The period of one year starts on the day of your FREE coaching session. </p>
         </details>
        
-            <input type="checkbox" id="feedback-notify" name="notify" required> <span for="feedback-notify" required>I have read and agreed to the terms and conditions listed in this form</span>
+            <input type="checkbox" id="cb" name="notify" id="checkme" required> <span style="color: red;" for="feedback-notify" >I have read and agreed to the terms and conditions listed in this form</span>
+           
             <br> <br>
-        <button type="submit" >Submit your application</button>
-
+        <button type="submit" onclick="myFunction()" id="submit" data-toggle="modal" data-target=".bd-example-modal-lg">Submit your application</button>
 
  
     </form>
-<script>
-function myFunction() {
-  alert("Your application has been submitted, you may close the page now");
-}
-</script>
-<script src="javascript.js"></script>
 
-  
+        
+   
+
+<script>
+
+
+    $("#submit").click(function(){
+
+    var fname = $("#fname").val();
+    var lname = $("#lname").val();
+    var email = $("#email").val();
+    var timezone = $("timezone").val();
+    var avail = $("#avail").val();
+    var bio = $("#bio").val();
+    var cb = $("#cb").val();
+
+    
+    if (fname ==''||lname==''||email==''||timezone==''||avail==''||bio==''){
+        swal({
+  title: "Fields Empty!",
+  text: "Please check the missing field!",
+  icon: "warning",
+  button: "okay",
+});
+
+
+}else{
+        
+        swal({
+  title: "Successfully submitted",
+  text: "You may close the page now",
+  icon: "success",
+  button: "Done",
+});
+}})
+
+
+$(document).ready(function() {
+
+var $submit = $("#submit").hide(),
+    $cbs = $("#cb").click(function() {
+        $submit.toggle( $cbs.is(":checked") );
+        
+    });
+
+
+});
+
+</script>
 </body>
 </html>
