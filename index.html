@@ -56,39 +56,53 @@
         </div>
         <div class="Form-element">
             <span>Your Bio</span>
-            <textarea type="text" id="bio" name="entry.586417276" placeholder="What would you like your mentee to know about you? Keep the length of your bio to no more than one paragraph"  class="form-control"   style="height: 200px;" required></textarea>
+            <textarea type="text" id="bio" name="entry.586417276" placeholder="What would you like your mentee to know about you? Keep the length of your bio to no more than one paragraph"  class="form-control"   style="height: 100px;" required></textarea>
 
         </div>
     </div>
     
     <iframe loading="lazy" src="https://script.google.com/a/macros/jamesmacneil.com/s/AKfycbyUp3-O5G1CoyTNhxPzK7G4MHYUm3rvVX9amYsIjwESo11LVld_f0xU4k147ueGmcxJWA/exec" name="iFrame Name" scrolling="No" height="140px auto" width="100%" style="border: none;"></iframe><hr>
-   <details style= "overflow-y: scroll;"><summary>
-            <span class="summary-closed">Please read the following terms and conditions</span>
-            <span class="summary-open">Please read the following terms and condition</span>
-          </summary>
-          <p>This Agreement is entered by and between Pure Spiritual Intelligence Inc. and , Pure and DreamLife Coach whereby you agree to provide a one-hour FREE coaching session to one of our community members with an option for signing them up for paid coaching sessions at the end of the FREE session.</p>
+   
+   
     
-    
-          <p>★<span id="men">CODE OF ETHICS</span><br>
-            a coach, you agree to maintain the ethics and standards of behavior established by the International Coach Federation (ICF) that can be found <a href="https://coachingfederation.org/ethics/code-of-ethics." target="_blank">HERE</a>.</p>
-            
 
-            <p>★<span id="men">FEES</span><br>
-           The first one-hour session with your coachee will be FREE. At the end of the coaching session, if you sign up your client for paid sessions, you will be paid at the rate of US$100 per session. Your client has an option of purchasing a single session at the rate of US$250, or a package of 10 sessions for US$2,000. </p>
-            
+    <a href="#" id="mySizeChart">Please read the following terms and conditions</a>
     
-           <p>★<span id="men">SESSIONS</span><br>
-            The time of the coaching meetings and/or location will be determined by you and your Coachee based on a mutually agreed upon time.</p>
-            
+    <div id="mySizeChartModal" class="ebcf_modal">
     
-            <p>★<span id="men">TERMINATION</span><br>
-            Either your Coachee or you, as the Coach, may terminate the Agreement between you at any time with 2 weeks written notice. In this case, you will be compensated for all coaching services rendered through and including the effective date of termination of the coaching relationship.</p>
-            
+      <div class="ebcf_modal-content">
+        <span class="ebcf_close">&times;</span>
+
+      <p>This Agreement is entered by and between Pure Spiritual Intelligence Inc. and , Pure and DreamLife Coach whereby you agree to provide a one-hour FREE coaching session to one of our community members with an option for signing them up for paid coaching sessions at the end of the FREE session.</p>
+
+
+      <p>★<span id="men">CODE OF ETHICS</span><br>
+        a coach, you agree to maintain the ethics and standards of behavior established by the International Coach Federation (ICF) that can be found <a href="https://coachingfederation.org/ethics/code-of-ethics." target="_blank">HERE</a>.</p>
+        
+
+        <p>★<span id="men">FEES</span><br>
+       The first one-hour session with your coachee will be FREE. At the end of the coaching session, if you sign up your client for paid sessions, you will be paid at the rate of US$100 per session. Your client has an option of purchasing a single session at the rate of US$250, or a package of 10 sessions for US$2,000. </p>
+        
+
+       <p>★<span id="men">SESSIONS</span><br>
+        The time of the coaching meetings and/or location will be determined by you and your Coachee based on a mutually agreed upon time.</p>
+        
+
+        <p>★<span id="men">TERMINATION</span><br>
+        Either your Coachee or you, as the Coach, may terminate the Agreement between you at any time with 2 weeks written notice. In this case, you will be compensated for all coaching services rendered through and including the effective date of termination of the coaching relationship.</p>
+        
+
+        <p>★<span id="men">DURATION OF THE CONTRACT</span><br>
+        After have been working with your Coachee for a period of ONE year, the Coachee becomes your Client, and thus all Agreements and/or Payments should be made directly between you, as a Coach, and your Coachee. The period of one year starts on the day of your FREE coaching session. </p>
+    </details>
+   
+      </div>
     
-            <p>★<span id="men">DURATION OF THE CONTRACT</span><br>
-            After have been working with your Coachee for a period of ONE year, the Coachee becomes your Client, and thus all Agreements and/or Payments should be made directly between you, as a Coach, and your Coachee. The period of one year starts on the day of your FREE coaching session. </p>
-        </details>
-       
+    </div>
+   
+   
+   
+<br>         
             <input type="checkbox" id="cb" name="notify" id="checkme" required> <span style="color: red;" for="feedback-notify" >I have read and agreed to the terms and conditions listed in this form</span>
            
             <br> <br>
@@ -144,6 +158,33 @@ var $submit = $("#submit").hide(),
 
 
 });
+
+
+// Get the modal
+var ebModal = document.getElementById('mySizeChartModal');
+
+// Get the button that opens the modal
+var ebBtn = document.getElementById("mySizeChart");
+
+// Get the <span> element that closes the modal
+var ebSpan = document.getElementsByClassName("ebcf_close")[0];
+
+// When the user clicks the button, open the modal 
+ebBtn.onclick = function() {
+    ebModal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+ebSpan.onclick = function() {
+    ebModal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == ebModal) {
+        ebModal.style.display = "none";
+    }
+}
 
 </script>
 </body>
