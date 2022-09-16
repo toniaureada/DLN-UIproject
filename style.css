@@ -171,8 +171,11 @@ span {
     margin-bottom: 50px;
 }
 
-/*MODAL    */
-.modal {
+
+
+
+/* The Modal (background) */
+.ebcf_modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -187,7 +190,7 @@ span {
 }
 
 /* Modal Content */
-.modal-content {
+.ebcf_modal-content {
   background-color: #fefefe;
   margin: auto;
   padding: 20px;
@@ -196,17 +199,16 @@ span {
 }
 
 /* The Close Button */
-.close {
+.ebcf_close {
   color: #aaaaaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+.ebcf_close:hover,
+.ebcf_close:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
 }
-/*END OF MODAL*/
